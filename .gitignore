@@ -20,3 +20,5 @@
 /bin/ext-template/
 /bin/ext-smartedit
 /bin/ext-webservices
+/config
+/data
