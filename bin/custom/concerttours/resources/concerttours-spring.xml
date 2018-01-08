@@ -78,6 +78,14 @@
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />	
 	  -->
 	
+	<context:component-scan base-package="concerttours"/>
+
+	<alias name = "defaultBandService" alias = "bandService" />
+	
+	<bean id = "defaultBandService" class = "concerttours.service.impl.DefaultBandService" >
+		<property name = "bandDAO" ref = "bandDAO" />
+	</bean>
+
     <bean id="concerttoursSystemSetup" class="concerttours.setup.ConcerttoursSystemSetup">
         <!-- constructor arg injection example -->
         <constructor-arg ref="concerttoursService"/>
